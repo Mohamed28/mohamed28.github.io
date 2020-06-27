@@ -1,0 +1,7 @@
+{
+    "files.autoSave": "onWindowChange",
+    "editor.minimap.maxColumn": 999,
+    "html.format.wrapLineLength": 0,
+    "editor.wordWrap": "on",
+    "beautify.config": ""
+}

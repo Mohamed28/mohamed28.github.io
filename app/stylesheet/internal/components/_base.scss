@@ -1,0 +1,80 @@
+*,
+*:after,
+*:before {
+    font-family: 'Manjari', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', arial;
+    font-weight: 600;
+    color: #484848;
+}
+
+p,
+span,
+div,
+form,
+input,
+li,
+dd,
+td,
+input,
+textarea {
+    font-family: inherit;
+    font-weight: 400;
+    color: #767676;
+    letter-spacing: 0.4px;
+}
+
+strong,
+label,
+a,
+u,
+em,
+ol,
+ul,
+dl,
+dt,
+th,
+fieldset {
+    font-family: inherit;
+    font-weight: 600;
+    color: #656565;
+    letter-spacing: 0.4px;
+}
+
+legend,
+figcaption {
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: 200;
+    letter-spacing: 0.4px;
+}
+
+
+a {
+    color: #8a0bc0;
+    text-decoration: none;
+
+    &:hover {
+        filter: hue-rotate(8deg) brightness(1.5);
+    }
+}
+
+mark {
+    background-color: rgba($color: #767676, $alpha: 0.5);
+    color: #F9F9F9;
+    filter: hue-rotate(180deg);
+}
