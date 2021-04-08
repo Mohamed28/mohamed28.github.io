@@ -11,6 +11,13 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 1280px;
+    margin: 0 auto;
+}
+
 h1,
 h2,
 h3,
