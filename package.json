@@ -1,0 +1,23 @@
+{
+  "name": "mohamed28.github.io",
+  "version": "1.0.0",
+  "description": "My dome sweet dome",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mohamed28/mohamed28.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mohamed28/mohamed28.github.io/issues"
+  },
+  "homepage": "https://github.com/Mohamed28/mohamed28.github.io#readme",
+  "devDependencies": {
+    "sass": "^1.32.8"
+  }
+}
