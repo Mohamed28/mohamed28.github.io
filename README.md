@@ -1,5 +1,9 @@
 # Mohamed28's DOME
 
+### Install NVM
+~~~
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.2/install.sh | bash
+~~~
 ## Image converters imagemagick
 
 #### SVG to PNG
