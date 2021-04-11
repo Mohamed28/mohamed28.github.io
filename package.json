@@ -6,7 +6,8 @@
   "main": "dist/index.html",
   "scripts": {
     "start": "parcel -p 5505 app/index.html --open --no-cache",
-    "build": "parcel build app/index.html --no-cache"
+    "build": "parcel build app/index.html --no-cache --public-url ./dist/",
+    "deploy": "rm -rf dist/* && rm index.html && npm run build && cd dist && cp index.html ../index.html"
   },
   "homepage": "https://mohamed28.github.io",
   "repository": {
