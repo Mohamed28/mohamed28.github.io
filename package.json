@@ -11,7 +11,7 @@
     "build": "parcel build app/index.html --no-cache --public-url ./",
     "deploy": "rm -rf dist/ && npm run build && gh-pages -d dist"
   },
-  "homepage": "https://github.com/Mohamed28/mohamed28.github.io",
+  "homepage": "https://mohamed28.github.io",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mohamed28/mohamed28.github.io.git"
@@ -26,9 +26,9 @@
   },
   "devDependencies": {
     "cssnano": "^5.0.0",
-    "gh-pages": "^3.1.0",
-    "parcel-bundler": "^1.12.4",
+    "sass": "^1.32.8",
     "postcss": "^8.2.9",
-    "sass": "^1.32.8"
+    "gh-pages": "^3.1.0",
+    "parcel-bundler": "^1.12.4"
   }
 }
