@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "parcel -p 5505 app/index.html --open",
     "start": "parcel -p 5505 app/index.html --open",
-    "build": "parcel build app/index.html --no-cache --public-url ./",
+    "build": "parcel build app/index.html",
     "deploy": "rm -rf dist/ && npm run build && gh-pages -d dist"
   },
   "homepage": "https://mohamed28.github.io",
