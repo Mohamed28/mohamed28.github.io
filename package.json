@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Dome sweet dome!",
   "author": "Lucas Barretto e Silva",
-  "main": "app/index.js",
+  "main": "index.html",
   "type": "module",
   "scripts": {
     "dev": "parcel -p 5505 app/index.html --open",
