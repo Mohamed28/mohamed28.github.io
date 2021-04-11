@@ -1,9 +1,26 @@
 # Mohamed28's DOME
 
-### Install NVM
+### Install ParcelJs
+##### Add dependecies on package.json
 ~~~
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.2/install.sh | bash
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "parcel": "^1.12.4"
+  }
 ~~~
+
+##### add scripts on package.json to run project
+~~~
+  "scripts": {
+    "dev": "parcel -p 5505 app/index.html --open",
+    "start": "parcel -p 5505 app/index.html --open",
+    "build": "parcel build app/index.html --no-cache --public-url",
+    "deploy": "rm -rf dist/ && npm run build ./ && gh-pages -d dist"
+  }
+~~~
+
 ## Image converters imagemagick
 
 #### SVG to PNG
