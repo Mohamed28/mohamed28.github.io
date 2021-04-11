@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Dome sweet dome!",
   "author": "Lucas Barretto e Silva",
-  "main": "dist/index.html",
+  "main": "index.html",
   "scripts": {
     "start": "parcel -p 5505 app/index.html --open --no-cache",
-    "build": "rm -rf dist/* && parcel build app/index.html --no-cache"
+    "build": "parcel build app/index.html --public-url . --no-cache"
   },
   "homepage": "https://mohamed28.github.io",
   "repository": {
