@@ -14,10 +14,9 @@
 ##### add scripts on package.json to run project
 ~~~
   "scripts": {
-    "dev": "parcel -p 5505 app/index.html --open",
-    "start": "parcel -p 5505 app/index.html --open",
-    "build": "parcel build app/index.html --no-cache --public-url",
-    "deploy": "rm -rf dist/ && npm run build ./ && gh-pages -d dist"
+    "start": "parcel -p 5505 app/index.html --open --no-cache",
+    "build": "parcel build app/index.html --no-cache --public-url ./dist/",
+    "deploy": "rm -rf dist/* && rm index.html && npm run build && cd dist && cp index.html ../index.html"
   }
 ~~~
 

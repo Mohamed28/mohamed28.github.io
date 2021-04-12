@@ -1,2 +1,2 @@
-console.log("Connected");
+const App = document.getElementById('app');
 

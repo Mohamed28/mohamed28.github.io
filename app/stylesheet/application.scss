@@ -67,34 +67,34 @@ html {
     box-sizing: border-box;
 }
 
-body {
+#app {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: max-content minmax(100%, max-content) max-content;
-    grid-template-areas:
-        "header header header header"
-        "nav main main main"
-        "footer footer footer footer";
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: max-content auto 72px;
     width: 1280px;
+    height: 100vh;
     margin: 0 auto;
-    grid-gap: 32px;
+    grid-row-gap: 32px;
+    grid-column-gap: 48px;
 }
 
 header {
-    grid-area: header;
+    grid-column: 1 / span 5;
 }
 
 nav {
-    grid-area: nav;
+    grid-column: 1 ;
 }
 
 main {
-    grid-area: main;
+    grid-column: 2 / span 3;
 }
 
 footer {
-    grid-area: footer;
-    text-align: center;
+    grid-column: 1 / span 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1,
