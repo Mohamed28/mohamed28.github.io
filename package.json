@@ -5,9 +5,10 @@
   "author": "Lucas Barretto e Silva",
   "main": "dist/index.html",
   "scripts": {
-    "start": "parcel -p 5505 app/index.html --open --no-cache",
-    "build": "parcel build app/index.html --no-cache --public-url ./dist/",
-    "deploy": "rm -rf dist/* && rm index.html && npm run build && cd dist && cp index.html ../index.html"
+    "start": "parcel -p 5505 src/index.html --open --no-cache",
+    "build": "parcel build src/index.html --no-cache --public-url ./dist/",
+    "deploy": "rm -rf dist/* && rm index.html && npm run build && cd dist && cp index.html ../index.html",
+    "kills": "kill -9 $(lsof -t -i:5505)"
   },
   "homepage": "https://mohamed28.github.io",
   "repository": {
@@ -23,6 +24,7 @@
     "postcss": "^8.2.9"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.12.13",
     "@parcel/transformer-sass": "^2.0.0-beta.2",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.32.8"
