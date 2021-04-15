@@ -5,7 +5,7 @@
   "author": "Lucas Barretto e Silva",
   "main": "dist/index.html",
   "scripts": {
-    "start": "parcel -p 5505 src/index.html --open --no-cache",
+    "start": "parcel -p 5505 src/index.html --open",
     "build": "parcel build src/index.html --no-cache --public-url ./dist/",
     "deploy": "rm -rf dist/* && npm run build && cd dist && cp index.html ../index.html",
     "kills": "kill -9 $(lsof -t -i:5505)"
