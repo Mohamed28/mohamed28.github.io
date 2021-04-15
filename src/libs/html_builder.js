@@ -1,19 +1,72 @@
 "use strict"
 
-export const HTMLBuilder = {
+export default class HTMLBuilder {
 
-    build(tag, content, options = {}, children = []) {
-        let element = document.createElement(tag)
-        let keys = Object.keys(options)
+    constructor(tag, content, options = {}, children = []) {
+        this._rootElement = document.createElement(tag)
 
-        if (content !== "") element.append(document.createTextNode(content))
+        return this.render(tag, content, options, children, true)
+    }
 
-        if (keys.length > 1) {
-            keys.forEach(key => element.setAttribute(key, options[key]))
+    render(tag, content, options, children, isRoot = false) {
+        this._element = isRoot ? this.rootElement : document.createElement(tag)
+        this.content(content)
+        this.options(options)
+        this.children(children)
+
+        if (isRoot) {
+           return this.rootElement
         }
 
-        if (children.length > 1) children.forEach(child => element.append(this.build(...child)))
-
-        return element
+        return this.element
     }
+
+    hasRootElement() {
+        return this.rootElement !== "undefined"
+    }
+
+    content(content) {
+        if (content === "") return
+
+        this.element.append(document.createTextNode(content))
+    }
+
+    options(options = {}) {
+        if (Object.keys(options).length < 1) return
+
+        Object.keys(options).forEach(key => this.element.setAttribute(key, options[key]))
+    }
+
+    children(children = []) {
+        if (children.length < 1) return;
+
+        children.forEach(child => {
+            if (Array.isArray(child)) child = this.render(...child);
+
+            this.rootElement.append(child)
+        })
+    }
+
+
+    get rootElement() {
+        return this._rootElement
+    }
+
+
+    get element() {
+        return this._element
+    }
+
+    // get content() {
+    //     return this._content
+    // }
+
+    // get options() {
+    //     return this._options
+    // }
+
+    // get children() {
+    //     return this._children
+    // }
+
 }
