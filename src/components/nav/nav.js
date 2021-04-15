@@ -1,9 +1,10 @@
-import { HTMLBuilder } from "../../libs/html_builder";
-import { navItems } from "./nav_items";
+import HTMLBuilder from "../../libs/html_builder";
+import MainNavItems from "./nav_items";
 
 import "./nav.scss";
+import MainNavMenu from "./nav_menu";
 
-const contents = [
+const data = [
     {
         header: "Projects",
         items: [
@@ -24,12 +25,8 @@ const contents = [
     }
 ]
 
-
-
-export const Nav = () => {
-    return HTMLBuilder.build("nav", "", { class: "nav", id: "nav" },
-        ["ul", "", { class: "nav__menu" },
-            contents.map(content => navItems(content))
-        ]
-    );
+export default class Nav extends HTMLBuilder {
+    constructor() {
+        super("nav", "", { class: "nav", id: "nav" }, [new MainNavMenu(data)])
+    }
 }

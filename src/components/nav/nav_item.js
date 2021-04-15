@@ -1,7 +1,8 @@
-import { HTMLBuilder } from "../../libs/html_builder";
+import HTMLBuilder from "../../libs/html_builder"
 
-export const navItem = (text, link) => {
-    return HTMLBuilder.build("li", "", { class: "nav__item" }, [
-        ["a", text, { href: link }]
-    ]);
+
+export default class MainNavItem extends HTMLBuilder {
+    constructor(item) {
+        super("a", item.text, { class: "nav__item", href: item.link })
+    }
 }

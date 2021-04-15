@@ -447,11 +447,12 @@ var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 var _libsHtml_builderDefault = _parcelHelpers.interopDefault(_libsHtml_builder);
 var _componentsHeaderHeader = require("./components/header/header");
 var _componentsHeaderHeaderDefault = _parcelHelpers.interopDefault(_componentsHeaderHeader);
-require("./components/nav/nav");
+var _componentsNavNav = require("./components/nav/nav");
+var _componentsNavNavDefault = _parcelHelpers.interopDefault(_componentsNavNav);
 const app = new _libsHtml_builderDefault.default("div", "", {
   id: "app",
   class: "app"
-}, [new _componentsHeaderHeaderDefault.default()]);
+}, [new _componentsHeaderHeaderDefault.default(), new _componentsNavNavDefault.default()]);
 document.body.append(app);
 
 },{"./libs/html_builder":"5pAFG","./components/header/header":"7aRXx","./components/nav/nav":"1THrI","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5pAFG":[function(require,module,exports) {
@@ -563,13 +564,13 @@ exports.default = MainHeader;
 },{"../../libs/html_builder":"5pAFG","./header.scss":"51rY3","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"51rY3":[function() {},{}],"1THrI":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
-_parcelHelpers.export(exports, "Nav", function () {
-  return Nav;
-});
 var _libsHtml_builder = require("../../libs/html_builder");
-var _nav_items = require("./nav_items");
+var _libsHtml_builderDefault = _parcelHelpers.interopDefault(_libsHtml_builder);
+require("./nav_items");
 require("./nav.scss");
-const contents = [{
+var _nav_menu = require("./nav_menu");
+var _nav_menuDefault = _parcelHelpers.interopDefault(_nav_menu);
+const data = [{
   header: "Projects",
   items: [{
     text: "Kindle Manga Reader",
@@ -582,44 +583,79 @@ const contents = [{
     link: "https://mohamed28.github.io/manga-web-reader/"
   }]
 }];
-const Nav = () => {
-  return _libsHtml_builder.HTMLBuilder.build("nav", "", {
-    class: "nav",
-    id: "nav"
-  }, ["ul", "", {
-    class: "nav__menu"
-  }, contents.map(content => _nav_items.navItems(content))]);
-};
+class Nav extends _libsHtml_builderDefault.default {
+  constructor() {
+    super("nav", "", {
+      class: "nav",
+      id: "nav"
+    }, [new _nav_menuDefault.default(data)]);
+  }
+}
+exports.default = Nav;
 
-},{"../../libs/html_builder":"5pAFG","./nav_items":"2ijIy","./nav.scss":"6vaV9","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"2ijIy":[function(require,module,exports) {
+},{"../../libs/html_builder":"5pAFG","./nav.scss":"6vaV9","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./nav_items":"2ijIy","./nav_menu":"4JZFT"}],"6vaV9":[function() {},{}],"2ijIy":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
-_parcelHelpers.export(exports, "navItems", function () {
-  return navItems;
-});
 var _libsHtml_builder = require("../../libs/html_builder");
+var _libsHtml_builderDefault = _parcelHelpers.interopDefault(_libsHtml_builder);
+var _nav_submenu = require("./nav_submenu");
+var _nav_submenuDefault = _parcelHelpers.interopDefault(_nav_submenu);
+class MainNavItems extends _libsHtml_builderDefault.default {
+  constructor(content) {
+    super("li", "", {
+      class: "nav__items"
+    }, [["details", "", {}, [["summary", content.header], ["div", "", {}, [new _nav_submenuDefault.default(content.items)]]]]]);
+  }
+}
+exports.default = MainNavItems;
+
+},{"../../libs/html_builder":"5pAFG","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./nav_submenu":"2vKEF"}],"2vKEF":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _libsHtml_builder = require("../../libs/html_builder");
+var _libsHtml_builderDefault = _parcelHelpers.interopDefault(_libsHtml_builder);
 var _nav_item = require("./nav_item");
-const navItems = content => {
-  return _libsHtml_builder.HTMLBuilder.build("li", "", {
-    class: "nav__items"
-  }, ["details", "", {}, [["summary", content.header], ["div", "", {}, ["ul", "", {}, content.items.map(item => _nav_item.navItem(item.text, item.link))]]]]);
-};
+var _nav_itemDefault = _parcelHelpers.interopDefault(_nav_item);
+class MainNavSubmenu extends _libsHtml_builderDefault.default {
+  constructor(items) {
+    super("div", "", {
+      class: "nav__submenu"
+    }, items.map(item => new _nav_itemDefault.default(item)));
+  }
+}
+exports.default = MainNavSubmenu;
 
 },{"../../libs/html_builder":"5pAFG","./nav_item":"3dHrV","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"3dHrV":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
-_parcelHelpers.export(exports, "navItem", function () {
-  return navItem;
-});
 var _libsHtml_builder = require("../../libs/html_builder");
-const navItem = (text, link) => {
-  return _libsHtml_builder.HTMLBuilder.build("li", "", {
-    class: "nav__item"
-  }, [["a", text, {
-    href: link
-  }]]);
-};
+var _libsHtml_builderDefault = _parcelHelpers.interopDefault(_libsHtml_builder);
+class MainNavItem extends _libsHtml_builderDefault.default {
+  constructor(item) {
+    super("a", item.text, {
+      class: "nav__item",
+      href: item.link
+    });
+  }
+}
+exports.default = MainNavItem;
 
-},{"../../libs/html_builder":"5pAFG","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"6vaV9":[function() {},{}]},["7yCo1","5rkFb"], "5rkFb", "parcelRequirece55")
+},{"../../libs/html_builder":"5pAFG","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"4JZFT":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _libsHtml_builder = require("../../libs/html_builder");
+var _libsHtml_builderDefault = _parcelHelpers.interopDefault(_libsHtml_builder);
+var _nav_items = require("./nav_items");
+var _nav_itemsDefault = _parcelHelpers.interopDefault(_nav_items);
+class MainNavMenu extends _libsHtml_builderDefault.default {
+  constructor(data) {
+    super("ul", "", {
+      class: "nav__menu"
+    }, data.map(content => new _nav_itemsDefault.default(content)));
+  }
+}
+exports.default = MainNavMenu;
+
+},{"../../libs/html_builder":"5pAFG","./nav_items":"2ijIy","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}]},["7yCo1","5rkFb"], "5rkFb", "parcelRequirece55")
 
 //# sourceMappingURL=index.3fafb3e2.js.map

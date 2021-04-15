@@ -1,15 +1,12 @@
-import { HTMLBuilder } from "../../libs/html_builder";
-import { navItem } from "./nav_item";
+import HTMLBuilder from "../../libs/html_builder"
+import MainNavSubmenu from "./nav_submenu"
 
-export const navItems = (content) => {
-    return HTMLBuilder.build("li", "", { class: "nav__items" },
-        ["details", "", {},
-            [
-                ["summary", content.header],
-                ["div", "", {},
-                    ["ul", "", {}, content.items.map(item => navItem(item.text, item.link))]
-                ]
-            ]
-        ]
-    );
+
+export default class MainNavItems extends HTMLBuilder {
+    constructor(content) {
+        super("li", "", { class: "nav__items" }, [["details", "", {}, [
+            ["summary", content.header],
+            ["div", "", {}, [new MainNavSubmenu(content.items)]]
+        ]]])
+    }
 }
