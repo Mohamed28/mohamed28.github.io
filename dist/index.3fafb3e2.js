@@ -444,10 +444,9 @@ id) /*: string*/
 },{}],"5rkFb":[function(require,module,exports) {
 require("./libs/html_builder");
 var _componentsHeaderHeader = require("./components/header/header");
-var _componentsNavNav = require("./components/nav/nav");
+require("./components/nav/nav");
 const App = document.getElementById("app");
 App.append(_componentsHeaderHeader.Header());
-App.append(_componentsNavNav.Nav());
 
 },{"./libs/html_builder":"5pAFG","./components/header/header":"7aRXx","./components/nav/nav":"1THrI"}],"5pAFG":[function(require,module,exports) {
 "use strict";
@@ -528,7 +527,7 @@ const Header = () => {
   }], ["h1", "Welcome to the Mohamed28's DOME!"]]);
 };
 
-},{"../../libs/html_builder":"5pAFG","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./header.scss":"51rY3"}],"51rY3":[function() {},{}],"1THrI":[function(require,module,exports) {
+},{"../../libs/html_builder":"5pAFG","./header.scss":"51rY3","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"51rY3":[function() {},{}],"1THrI":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "Nav", function () {
@@ -559,7 +558,7 @@ const Nav = () => {
   }, contents.map(content => _nav_items.navItems(content))]);
 };
 
-},{"../../libs/html_builder":"5pAFG","./nav.scss":"6vaV9","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./nav_items":"2ijIy"}],"6vaV9":[function() {},{}],"2ijIy":[function(require,module,exports) {
+},{"../../libs/html_builder":"5pAFG","./nav_items":"2ijIy","./nav.scss":"6vaV9","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"2ijIy":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "navItems", function () {
@@ -588,6 +587,6 @@ const navItem = (text, link) => {
   }]]);
 };
 
-},{"../../libs/html_builder":"5pAFG","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}]},["7yCo1","5rkFb"], "5rkFb", "parcelRequirece55")
+},{"../../libs/html_builder":"5pAFG","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"6vaV9":[function() {},{}]},["7yCo1","5rkFb"], "5rkFb", "parcelRequirece55")
 
 //# sourceMappingURL=index.3fafb3e2.js.map
