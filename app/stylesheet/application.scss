@@ -53,3 +53,121 @@
         url('https://mohamed28.github.io/app/assets/fonts/manjari-bold.woff') format('woff'),
         url('https://mohamed28.github.io/app/assets/fonts/manjari-bold.woff2') format('woff2');
 }
+
+*,
+*:after,
+*:before {
+    font-family: 'Manjari', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: max-content auto 72px;
+    width: 1280px;
+    height: 100vh;
+    margin: 0 auto;
+    grid-row-gap: 32px;
+    grid-column-gap: 48px;
+}
+
+header {
+    grid-column: 1 / span 5;
+}
+
+nav {
+    grid-column: 1 ;
+}
+
+main {
+    grid-column: 2 / span 3;
+}
+
+footer {
+    grid-column: 1 / span 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', arial;
+    font-weight: 600;
+    color: #484848;
+}
+
+p,
+span,
+div,
+form,
+input,
+li,
+dd,
+td,
+input,
+textarea {
+    font-family: inherit;
+    font-weight: 400;
+    color: #767676;
+    letter-spacing: 0.4px;
+}
+
+summary,
+strong,
+label,
+a,
+u,
+em,
+ol,
+ul,
+dl,
+dt,
+th,
+fieldset {
+    font-family: inherit;
+    font-weight: 600;
+    color: #656565;
+    letter-spacing: 0.4px;
+}
+
+legend,
+figcaption {
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: 200;
+    letter-spacing: 0.4px;
+}
+
+
+a {
+    color: #8a0bc0;
+    text-decoration: none;
+
+    &:hover {
+        filter: hue-rotate(8deg) brightness(1.5);
+    }
+}
+
+mark {
+    background-color: rgba(#767676, 0.5);
+    color: #F9F9F9;
+    filter: hue-rotate(180deg);
+}
+
+summary {
+    list-style-type: none;
+    outline: none;
+    cursor: pointer;
+}
