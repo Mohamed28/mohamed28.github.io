@@ -1,2 +1,0 @@
-!function(){const e={build:function(e,t,a={},n=[]){let o=document.createElement(e),c=Object.keys(a);return""!==t&&o.append(document.createTextNode(t)),c.length>1&&c.forEach((e=>o.setAttribute(e,a[e]))),n.length>1&&n.forEach((e=>o.append(this.build(...e)))),o}};document.getElementById("app").append(e.build("header","",{class:"header"},[["img","",{src:"https://mohamed28.github.io/src/assets/images/icons/head/home-tab.png",alt:"Logo"}],["h1","Welcome to the Mohamed28's DOME!"]]))}();
-//# sourceMappingURL=index.fa511888.js.map

@@ -1,3 +1,36 @@
 {
-
+    "public_url": "https://mohamed28.github.io/",
+    "root_path": "./dist/",
+    "navigation": {
+        "collections": [
+            {
+                "header": "Projects",
+                "items": [
+                    {
+                        "name": "Resume",
+                        "url": "my-resume"
+                    },
+                    {
+                        "name": "Kindle Manga Reader",
+                        "url": "https://mohamed28.github.io/manga-web-reader"
+                    }
+                ]
+            },
+            {
+                "header": "Tests & Examples",
+                "items": [
+                    {
+                        "name": "Grid",
+                        "url": "grid"
+                    }
+                ]
+            }
+        ],
+        "links": [
+            {
+                "name": "Contatc Me",
+                "url": "mailto:mohamed28.lucas@gmail.com?subject=Hi%20there%20Mr.%20Mohamed28!"
+            }
+        ]
+    }
 }

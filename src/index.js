@@ -1,9 +1,11 @@
-import HTMLBuilder from "./libs/html_builder";
-import MainHeader from "./components/header/header";
-import Nav from "./components/nav/nav";
+import config from "../config.json"
+import Header from "./components/header/Header";
+import Nav from "./components/nav/Nav";
+import Component from "./libs/component";
 
-const app = new HTMLBuilder("div", "", { id: "app", class: "app" }, [
-    new MainHeader(), new Nav()
-])
-
-document.body.append(app)
+document.body.append(
+    Component.build("div", "", { id: "app", class: "app" },
+        new Header(),
+        new Nav(config.navigation)
+    )
+)

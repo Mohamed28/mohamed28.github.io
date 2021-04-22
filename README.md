@@ -16,9 +16,34 @@
   "scripts": {
     "start": "parcel -p 5505 app/index.html --open --no-cache",
     "build": "parcel build app/index.html --no-cache --public-url ./dist/",
-    "deploy": "rm -rf dist/* && rm index.html && npm run build && cd dist && cp index.html ../index.html"
+    "deploy": "rm -rf dist/* && npm run build && cd dist && cp index.html ../index.html",
+    "kills" : "kill -9 $(lsof -t -i:5505)"
   }
 ~~~
+#
+
+## WEB SERVER
+### Python Server
+~~~
+python3 -m http.server 5505
+~~~
+
+### Killing  Server
+#### To list any process listening to the port 8080:
+~~~
+lsof -i:8080
+~~~
+
+####  To kill any process listening to the port 8080:
+~~~
+kill $(lsof -t -i:8080)
+~~~
+
+#### or more violently:
+~~~
+kill -9 $(lsof -t -i:8080)
+~~~
+#
 
 ## Image converters imagemagick
 
