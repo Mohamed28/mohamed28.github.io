@@ -18,15 +18,7 @@
   "bugs": {
     "url": "https://github.com/Mohamed28/mohamed28.github.io/issues"
   },
-  "dependencies": {
-    "cssnano": "^5.0.0",
-    "parcel": "^2.0.0-beta.2",
-    "postcss": "^8.2.9"
-  },
   "devDependencies": {
-    "@babel/plugin-proposal-export-default-from": "^7.12.13",
-    "@parcel/transformer-sass": "^2.0.0-beta.2",
-    "parcel-bundler": "^1.12.4",
-    "sass": "^1.32.8"
+    "parcel": "^2.0.0-beta.2"
   }
 }

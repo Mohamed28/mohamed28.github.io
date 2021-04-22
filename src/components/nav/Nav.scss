@@ -104,8 +104,14 @@ nav {
             width: 100%;
         }
 
-        a:hover {
-            filter: hue-rotate(8deg) brightness(1.5);
+        a {
+            + a {
+                padding-top: 6px;
+            }
+
+            &:hover {
+                filter: hue-rotate(8deg) brightness(1.5);
+            }
         }
 
     }
