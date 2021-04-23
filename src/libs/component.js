@@ -4,10 +4,14 @@ export default class Component {
 
         if (content !== "") element.innerText = content
 
+        if (Object.keys(options).includes("event")) {
+            Component.addEventListener(element, options.event)
+            delete options?.event
+        }
+
         if (Object.keys(options).length > 0) {
             Object.keys(options).forEach(key => element.setAttribute(key, options[key]))
         }
-
 
         if (children.length > 0) {
             children.forEach(child => {
@@ -19,5 +23,12 @@ export default class Component {
             })
         }
         return element
+    }
+
+    static addEventListener(element, properties) {
+        let [event, callback, target] = properties
+
+        element.addEventListener(event, window.app.bind(callback))
+
     }
 }

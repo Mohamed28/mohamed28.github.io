@@ -1,0 +1,245 @@
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://mohamed28.github.io/src/assets/fonts/open-sans-regular.ttf") format("truetype"), url("https://mohamed28.github.io/src/assets/fonts/open-sans-regular.woff") format("woff"), url("https://mohamed28.github.io/src/assets/fonts/open-sans-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-style: normal;
+  src: url("https://mohamed28.github.io/src/assets/fonts/open-sans-bold.ttf") format("truetype"), url("https://mohamed28.github.io/src/assets/fonts/open-sans-bold.woff") format("woff"), url("https://mohamed28.github.io/src/assets/fonts/open-sans-bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 800;
+  font-style: normal;
+  src: url("https://mohamed28.github.io/src/assets/fonts/open-sans-extra-bold.ttf") format("truetype"), url("https://mohamed28.github.io/src/assets/fonts/open-sans-extra-bold.woff") format("woff"), url("https://mohamed28.github.io/src/assets/fonts/open-sans-extra-bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manjari";
+  font-weight: 200;
+  font-style: normal;
+  src: url("https://mohamed28.github.io/src/assets/fonts/manjari-thin.ttf") format("truetype"), url("https://mohamed28.github.io/src/assets/fonts/manjari-thin.woff") format("woff"), url("https://mohamed28.github.io/src/assets/fonts/manjari-thin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manjari";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://mohamed28.github.io/src/assets/fonts/manjari-regular.ttf") format("truetype"), url("https://mohamed28.github.io/src/assets/fonts/manjari-regular.woff") format("woff"), url("https://mohamed28.github.io/src/assets/fonts/manjari-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manjari";
+  font-weight: 600;
+  font-style: normal;
+  src: url("https://mohamed28.github.io/src/assets/fonts/manjari-bold.ttf") format("truetype"), url("https://mohamed28.github.io/src/assets/fonts/manjari-bold.woff") format("woff"), url("https://mohamed28.github.io/src/assets/fonts/manjari-bold.woff2") format("woff2");
+}
+*,
+*:after,
+*:before {
+  font-family: "Manjari", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+#app {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: max-content auto 72px;
+  min-width: 1280px;
+  max-width: 80%;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  grid-row-gap: 32px;
+  grid-column-gap: 48px;
+}
+header {
+  grid-column: 1/span 5;
+}
+nav {
+  grid-column: 1;
+}
+main {
+  grid-column: 2/span 3;
+}
+footer {
+  grid-column: 1/span 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", arial;
+  font-weight: 600;
+  color: #484848;
+}
+p,
+span,
+div,
+form,
+input,
+li,
+dd,
+td,
+input,
+textarea {
+  font-family: inherit;
+  font-weight: 400;
+  color: #767676;
+  letter-spacing: 0.4px;
+}
+summary,
+strong,
+label,
+a,
+u,
+em,
+ol,
+ul,
+dl,
+dt,
+th,
+fieldset {
+  font-family: inherit;
+  font-weight: 600;
+  color: #656565;
+  letter-spacing: 0.4px;
+}
+legend,
+figcaption {
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: 200;
+  letter-spacing: 0.4px;
+}
+a {
+  color: #8a0bc0;
+  text-decoration: none;
+}
+a:hover {
+  filter: hue-rotate(8deg) brightness(1.5);
+}
+mark {
+  background-color: rgba(118, 118, 118, 0.5);
+  color: #F9F9F9;
+  filter: hue-rotate(180deg);
+}
+summary {
+  list-style-type: none;
+  outline: none;
+  cursor: pointer;
+}
+header {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+  column-gap: 32px;
+}
+header h1 {
+  margin: auto;
+  text-align: center;
+}
+header img {
+  margin: auto 0 auto auto;
+  width: 100%;
+  max-width: 128px;
+}
+nav a,
+nav summary {
+  color: #767676;
+}
+nav a:hover,
+nav a div:hover,
+nav summary:hover,
+nav summary div:hover {
+  color: #8a0bc0;
+  filter: unset;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  width: auto;
+}
+nav ul li {
+  position: relative;
+  min-height: 32px;
+}
+nav details {
+  position: relative;
+  width: 100%;
+}
+nav details summary {
+  background-color: #FFF;
+  width: max-content;
+}
+nav details summary div {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  width: max-content;
+  padding-right: 16px;
+  transition: height 150ms easy-in;
+  font-weight: 600;
+}
+nav details ul li + li {
+  border-top: 1px solid rgba(118, 118, 118, 0.15);
+}
+nav details ul a {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 2px;
+}
+nav details:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 24px;
+  width: 0%;
+  background-image: linear-gradient(#8a0bc0, #8a0bc0);
+  background-position: center;
+  background-size: auto 4px;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transition-duration: 150ms;
+}
+nav details[open] summary div {
+  padding-right: 16px;
+  color: #8a0bc0;
+  transition: width 150ms easy-in;
+  max-height: max-content;
+}
+nav details[open] ul {
+  margin-left: 16px;
+  margin-bottom: 8px;
+}
+nav details[open]:before {
+  width: 100%;
+}
+nav details[open] a + a {
+  padding-top: 6px;
+}
+nav details[open] a:hover {
+  filter: hue-rotate(8deg) brightness(1.5);
+}
+/*# sourceMappingURL=index.b2a1a79b.css.map */

@@ -22,8 +22,9 @@ export default class Nav {
                 ["summary", "", {},
                     ["div", collection.header]
                 ],
-                ["ul", "", {},
-                    ...collection.items.map(item => this.item(item))
+                ["div", "", {},
+                    ["ul", "", {},
+                        ...collection.items.map(item => this.item(item))]
                 ]
             ]
         ]
