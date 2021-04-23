@@ -2,11 +2,9 @@ nav {
 
     a,
     summary {
-        color: #767676;
 
         &:hover,
         div:hover {
-            color: #8a0bc0;
             filter: unset;
         }
     }
@@ -29,7 +27,7 @@ nav {
         width: 100%;
 
         summary {
-            background-color: #FFF;
+            background-color: var(--secondary-color);
             width: max-content;
 
             div {
@@ -45,7 +43,7 @@ nav {
 
         ul {
             li+li {
-                border-top: 1px solid rgba(#767676, 0.15);
+                border-top: 1px solid var(--tertiary-color);
             }
 
             a {
@@ -72,9 +70,9 @@ nav {
             bottom: 0;
             height: 24px;
             width: 0%;
-            background-image: linear-gradient(#8a0bc0, #8a0bc0);
+            background-image: linear-gradient(var(--highlight-color), var(--highlight-color));
             background-position: center;
-            background-size: auto 4px;
+            background-size: auto 2px;
             background-repeat: no-repeat;
             z-index: -1;
             transition-duration: 150ms;
@@ -82,14 +80,13 @@ nav {
 
     }
 
-
     details[open] {
         summary {
             div {
                 padding-right: 16px;
-                color: #8a0bc0;
                 transition: width 150ms easy-in;
                 max-height: max-content;
+                color: var(--highlight-color);
             }
 
         }
@@ -105,12 +102,8 @@ nav {
         }
 
         a {
-            + a {
+            +a {
                 padding-top: 6px;
-            }
-
-            &:hover {
-                filter: hue-rotate(8deg) brightness(1.5);
             }
         }
 
