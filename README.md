@@ -57,6 +57,23 @@ convert -background transparent -quality 100 *.svg -set filename:base "%[basenam
 convert -quality 100 *.psd -set filename:base "%[basename]" "%[filename:base].png"
 ~~~
 
+#### Resize pixielized images
+~~~
+~~~
+
+### GET VIDEO INFO
+~~~
+ffmpeg -i video.flv
+~~~
+#### PNGS to MP4
+~~~
+ffmpeg -i 0%d.png imagestovideo.mp4​
+~~~
+### VIDEO TO MP3
+~~~
+ffmpeg -i video.flv -vn -ar 44100 -ac 2 -ab 192 -f mp3 audio.mp3 ​
+~~~
+
 #### Optmizing quality
 ~~~
 convert  *.png -set filename:base "%[basename]" -quality 100 "%[filename:base].png"
