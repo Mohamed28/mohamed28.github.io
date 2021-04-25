@@ -6,6 +6,7 @@ nav {
         &:hover,
         div:hover {
             filter: unset;
+            color: var(--highlight-color);
         }
     }
 

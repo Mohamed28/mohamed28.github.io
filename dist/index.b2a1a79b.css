@@ -120,6 +120,7 @@ header {
   grid-template-columns: 1fr 1.5fr 1fr;
   grid-template-rows: auto;
   justify-content: center;
+  align-items: center;
   column-gap: 32px;
 }
 header h1 {
@@ -129,13 +130,14 @@ header h1 {
 header img {
   margin: auto 0 auto auto;
   width: 100%;
-  max-width: 128px;
+  max-width: 160px;
 }
 nav a:hover,
 nav a div:hover,
 nav summary:hover,
 nav summary div:hover {
   filter: unset;
+  color: var(--highlight-color);
 }
 nav ul {
   display: flex;
